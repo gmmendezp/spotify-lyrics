@@ -15,7 +15,7 @@ var updateCurrent = function(status) {
   });
 };
 
-server.listen(80);
+server.listen(8000);
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
