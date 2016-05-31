@@ -1,0 +1,24 @@
+{
+  "name": "spotify-lyrics",
+  "version": "0.1.0",
+  "description": "Get lyrics for the song playing in spotify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gmmendezp",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express-server": "^0.5.3",
+    "grunt-parallel": "^0.4.1"
+  },
+  "dependencies": {
+    "@jonny/spotify-web-helper": "^1.0.4",
+    "cheerio": "^0.20.0",
+    "express": "^4.13.4",
+    "node-spotify-webhelper": "0.0.4",
+    "request": "^2.72.0"
+  }
+}
