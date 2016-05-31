@@ -71,6 +71,6 @@ exports = module.exports = function(info) {
     )
   ).then(findLyrics).then(
     lyrics => Object.assign({lyrics}, info),
-    lyrics => Object.assign({lyrics}, info)
+    err => Object.assign({lyrics: err}, info)
   );
-}
+};

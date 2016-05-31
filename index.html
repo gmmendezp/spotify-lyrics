@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-size: 16px;
+        line-height: 1.2em;
+      }
+
+      content, header {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2 id="title"></h2>
+    </header>
+    <content>
+      <pre id="lyrics"></pre>
+    </content>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script>
+      var socket = io();
+      socket.on('track', function (data) {
+        $('#title').text(`${data.artist} - ${data.title}`);
+        $('#lyrics').text(data.lyrics);
+      });
+    </script>
+  </body>
+</html>
