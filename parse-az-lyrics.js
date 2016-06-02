@@ -48,7 +48,7 @@ var findSong = function(title, artistUrl) {
 };
 
 var findLyrics = function(songUrl) {
-  songUrl = cleanTitleUrl(songUrl)
+  songUrl = cleanTitleUrl(songUrl);
   return new Promise(function(resolve, reject) {
     if (!songUrl) return reject(notFound);
     let url = `${base}${songUrl}`;
